@@ -14,7 +14,9 @@ class GildedRose {
                     items[i].quality = items[i].quality - 1;
                 }
             } else {
-                items[i].quality = items[i].quality + 1;
+                if (items[i].quality < 50) {
+                    items[i].quality = items[i].quality + 1;
+                }
             }
 
             items[i].sellIn = items[i].sellIn - 1;
@@ -25,7 +27,9 @@ class GildedRose {
                         items[i].quality = items[i].quality - 1;
                     }
                 } else {
-                    items[i].quality = items[i].quality + 1;
+                    if (items[i].quality < 50) {
+                        items[i].quality = items[i].quality + 1;
+                    }
                 }
             }
         }
